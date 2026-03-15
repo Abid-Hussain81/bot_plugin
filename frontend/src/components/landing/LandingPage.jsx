@@ -125,7 +125,7 @@ const faqItems = [
 export default function LandingPage() {
   return (
     <div className={styles.page}>
-      <Header styles={styles} />
+      <Header />
       <main className={styles.main}>
         <Hero styles={styles} />
         <Features styles={styles} items={featureCards} />
