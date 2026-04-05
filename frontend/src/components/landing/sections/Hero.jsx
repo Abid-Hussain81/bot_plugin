@@ -19,6 +19,20 @@ export default function Hero({ styles }) {
           </Link>
           <button className={styles.ghostButton}>Watch Demo</button>
         </div>
+        <div className={styles.heroMeta}>
+          <div>
+            <span className={styles.heroMetaValue}>220+</span>
+            <span className={styles.heroMetaLabel}>Stores onboarded</span>
+          </div>
+          <div>
+            <span className={styles.heroMetaValue}>&lt;30s</span>
+            <span className={styles.heroMetaLabel}>Average response</span>
+          </div>
+          <div>
+            <span className={styles.heroMetaValue}>Woo-ready</span>
+            <span className={styles.heroMetaLabel}>Plugin included</span>
+          </div>
+        </div>
       </div>
       <div className={styles.heroVisual}>
         <div className={styles.heroCardBack} />

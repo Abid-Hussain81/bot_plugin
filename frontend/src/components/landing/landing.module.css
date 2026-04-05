@@ -1,6 +1,6 @@
 .page {
   min-height: 100vh;
-  background: #f7f7fb;
+  background: radial-gradient(circle at top left, #f4f0ff 0%, #f7f7fb 45%, #eef2ff 100%);
   color: #0f172a;
 }
 
@@ -188,15 +188,15 @@
 .main {
   margin: 0 auto;
   max-width: 1240px;
-  padding: 64px 24px 80px;
+  padding: 72px 24px 90px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 88px;
 }
 
 .hero {
   display: grid;
-  gap: 40px;
+  gap: 44px;
   align-items: center;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .heroTitle {
-  font-size: 36px;
+  font-size: 38px;
   line-height: 1.15;
   font-weight: 600;
   margin: 0;
@@ -232,6 +232,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.heroMeta {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.heroMetaValue {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.heroMetaLabel {
+  display: block;
+  margin-top: 2px;
 }
 
 .ghostButton {
@@ -294,7 +314,7 @@
 
 .features {
   border-radius: 24px;
-  background: #fff;
+  background: #ffffff;
   padding: 40px 32px;
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.06);
 }
@@ -333,6 +353,12 @@
   padding: 24px;
   border: 1px solid #f1f5f9;
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
 }
 
 .featureImage {
@@ -374,6 +400,12 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.integrationCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
 }
 
 .integrationTop {
@@ -484,6 +516,12 @@
   background: #fff;
   padding: 24px;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.simpleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.1);
 }
 
 .cardImageOne {
@@ -522,6 +560,13 @@
   background: #f8fafc;
   padding: 24px;
   border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+  background: #ffffff;
 }
 
 .stepIndex {
@@ -731,7 +776,12 @@
   }
 
   .heroTitle {
-    font-size: 48px;
+    font-size: 52px;
+  }
+
+  .heroMeta {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 520px;
   }
 
   .featureGrid {
