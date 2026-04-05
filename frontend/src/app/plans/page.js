@@ -1,5 +1,6 @@
 import Link from "next/link";
 import InnerHeader from "@/components/shared/InnerHeader";
+import SiteFooter from "@/components/shared/SiteFooter";
 import styles from "./plans.module.css";
 
 const plans = [
@@ -275,6 +276,7 @@ export default function PlansPage() {
           </Link>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

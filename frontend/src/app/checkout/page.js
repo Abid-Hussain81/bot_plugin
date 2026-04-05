@@ -1,5 +1,6 @@
 import Link from "next/link";
 import InnerHeader from "@/components/shared/InnerHeader";
+import SiteFooter from "@/components/shared/SiteFooter";
 import styles from "./checkout.module.css";
 
 const summaryRows = [
@@ -183,6 +184,7 @@ export default function CheckoutPage() {
           </Link>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

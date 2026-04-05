@@ -1,0 +1,93 @@
+.footer {
+  border-top: 1px solid #e2e8f0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  display: grid;
+  gap: 28px;
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.brandBadge {
+  height: 36px;
+  width: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6d4bff, #38bdf8);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(109, 75, 255, 0.35);
+}
+
+.tagline {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.bottomRow {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 16px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 860px) {
+  .inner {
+    grid-template-columns: 1.4fr 0.8fr 0.8fr;
+    align-items: start;
+  }
+
+  .bottomRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

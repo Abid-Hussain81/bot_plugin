@@ -9,7 +9,7 @@ import Steps from "./sections/Steps";
 import Testimonials from "./sections/Testimonials";
 import FAQ from "./sections/FAQ";
 import CTA from "./sections/CTA";
-import Footer from "./sections/Footer";
+import SiteFooter from "../shared/SiteFooter";
 
 const featureCards = [
   {
@@ -137,7 +137,7 @@ export default function LandingPage() {
         <FAQ styles={styles} items={faqItems} />
         <CTA styles={styles} />
       </main>
-      <Footer styles={styles} />
+      <SiteFooter />
     </div>
   );
 }
