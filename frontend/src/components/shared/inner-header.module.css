@@ -1,0 +1,102 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.brandBadge {
+  height: 36px;
+  width: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6d4bff, #38bdf8);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  font-size: 14px;
+}
+
+.brandText {
+  font-size: 15px;
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.navLink,
+.navLinkActive {
+  text-decoration: none;
+  font-size: 13px;
+  color: #64748b;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+  background: #eef2ff;
+  color: #1e1b4b;
+}
+
+.navLinkActive {
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cta {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #111827;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 860px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    text-align: center;
+  }
+}

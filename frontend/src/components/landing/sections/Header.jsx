@@ -1,25 +1,26 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import styles from "../landing.module.css";
 
 const navItems = [
-  { label: "Product",      href: "#features" },
-  { label: "Features",     href: "#integrations" },
-  { label: "How it works", href: "#steps" },
-  { label: "FAQ",          href: "#faq" },
+  { label: "Product", href: "/#features" },
+  { label: "Features", href: "/#integrations" },
+  { label: "How it works", href: "/#steps" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Header() {
-  const [active, setActive] = useState("#features");
+  const [active, setActive] = useState("/#features");
 
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
         {/* Logo */}
-        <div className={styles.brand}>
+        <Link href="/" className={styles.brand}>
           <span className={styles.brandBadge}>A</span>
           <span className={styles.brandName}>AISK.Chat</span>
-        </div>
+        </Link>
 
         {/* Pill Nav */}
         <nav className={styles.nav}>
@@ -51,7 +52,9 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <button className={styles.primaryButton}>Contact Us</button>
+        <Link href="/plans" className={styles.primaryButton}>
+          View Plans
+        </Link>
       </div>
     </header>
   );

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTA({ styles }) {
   return (
     <section className={styles.cta}>
@@ -5,7 +7,9 @@ export default function CTA({ styles }) {
       <p className={styles.ctaText}>
         Start today and convert more chats into customers.
       </p>
-      <button className={styles.ctaButton}>Get Started</button>
+      <Link href="/plans" className={styles.ctaButton}>
+        Choose a Plan
+      </Link>
     </section>
   );
 }

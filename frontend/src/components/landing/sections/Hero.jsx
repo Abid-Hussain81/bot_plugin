@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero({ styles }) {
   return (
     <section className={styles.hero}>
@@ -12,7 +14,9 @@ export default function Hero({ styles }) {
           AISK.Chat keeps customers happy across every channel.
         </p>
         <div className={styles.heroActions}>
-          <button className={styles.primaryButton}>Contact Us Now</button>
+          <Link href="/plans" className={styles.primaryButton}>
+            Start Free Trial
+          </Link>
           <button className={styles.ghostButton}>Watch Demo</button>
         </div>
       </div>
