@@ -1,4 +1,5 @@
 import styles from "./landing.module.css";
+import Reveal from "../shared/Reveal";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Features from "./sections/Features";
@@ -127,15 +128,33 @@ export default function LandingPage() {
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
-        <Hero styles={styles} />
-        <Features styles={styles} items={featureCards} />
-        <Integrations styles={styles} items={integrations} />
-        <Knowledge styles={styles} points={knowledgePoints} />
-        <MustHave styles={styles} />
-        <Steps styles={styles} steps={steps} />
-        <Testimonials styles={styles} items={testimonials} />
-        <FAQ styles={styles} items={faqItems} />
-        <CTA styles={styles} />
+        <Reveal>
+          <Hero styles={styles} />
+        </Reveal>
+        <Reveal>
+          <Features styles={styles} items={featureCards} />
+        </Reveal>
+        <Reveal>
+          <Integrations styles={styles} items={integrations} />
+        </Reveal>
+        <Reveal>
+          <Knowledge styles={styles} points={knowledgePoints} />
+        </Reveal>
+        <Reveal>
+          <MustHave styles={styles} />
+        </Reveal>
+        <Reveal>
+          <Steps styles={styles} steps={steps} />
+        </Reveal>
+        <Reveal>
+          <Testimonials styles={styles} items={testimonials} />
+        </Reveal>
+        <Reveal>
+          <FAQ styles={styles} items={faqItems} />
+        </Reveal>
+        <Reveal>
+          <CTA styles={styles} />
+        </Reveal>
       </main>
       <SiteFooter />
     </div>

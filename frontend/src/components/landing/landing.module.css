@@ -664,16 +664,11 @@
 }
 
 .faqAnswer {
-  display: none;
   margin: 12px 0 0;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
   color: #5b6b7f;
-}
-
-.faqItemOpen .faqAnswer {
-  display: block;
 }
 
 .faqIcon {

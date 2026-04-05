@@ -1,6 +1,7 @@
 import Link from "next/link";
 import InnerHeader from "@/components/shared/InnerHeader";
 import SiteFooter from "@/components/shared/SiteFooter";
+import Reveal from "@/components/shared/Reveal";
 import styles from "./plans.module.css";
 
 const plans = [
@@ -138,143 +139,159 @@ export default function PlansPage() {
       />
 
       <main className={styles.main}>
-        <section className={styles.hero}>
-          <div className={styles.heroText}>
-            <p className={styles.eyebrow}>Pricing</p>
-            <h1 className={styles.title}>Pick a plan that grows with your store</h1>
-            <p className={styles.subtitle}>
-              Launch AI support for WooCommerce in minutes. Upgrade anytime as
-              your volume scales.
-            </p>
-            <div className={styles.billingToggle}>
-              <span className={styles.billingLabelActive}>Monthly</span>
-              <span className={styles.billingLabel}>Annual (save 20%)</span>
-            </div>
-          </div>
-          <div className={styles.heroCard}>
-            <h3>What you get</h3>
-            <ul className={styles.heroList}>
-              <li>Instant setup with guided onboarding</li>
-              <li>AI answers trained on your catalog</li>
-              <li>Human handoff with full context</li>
-              <li>Analytics dashboard &amp; response ratings</li>
-            </ul>
-            <p className={styles.heroFootnote}>
-              All plans include the WooCommerce plugin and support.
-            </p>
-          </div>
-        </section>
-
-        <section className={styles.planGrid}>
-          {plans.map((plan) => (
-            <article
-              key={plan.name}
-              className={`${styles.planCard} ${
-                plan.badge ? styles.planCardPopular : ""
-              }`}
-            >
-              <div className={styles.planTop}>
-                <div>
-                  <p className={styles.planName}>{plan.name}</p>
-                  <p className={styles.planPrice}>
-                    <span>{plan.price}</span>
-                    {plan.cadence}
-                  </p>
-                </div>
-                {plan.badge ? (
-                  <span className={styles.planBadge}>{plan.badge}</span>
-                ) : null}
+        <Reveal>
+          <section className={styles.hero}>
+            <div className={styles.heroText}>
+              <p className={styles.eyebrow}>Pricing</p>
+              <h1 className={styles.title}>
+                Pick a plan that grows with your store
+              </h1>
+              <p className={styles.subtitle}>
+                Launch AI support for WooCommerce in minutes. Upgrade anytime as
+                your volume scales.
+              </p>
+              <div className={styles.billingToggle}>
+                <span className={styles.billingLabelActive}>Monthly</span>
+                <span className={styles.billingLabel}>Annual (save 20%)</span>
               </div>
-              <p className={styles.planDescription}>{plan.description}</p>
-              <ul className={styles.planList}>
-                {plan.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
+            </div>
+            <div className={styles.heroCard}>
+              <h3>What you get</h3>
+              <ul className={styles.heroList}>
+                <li>Instant setup with guided onboarding</li>
+                <li>AI answers trained on your catalog</li>
+                <li>Human handoff with full context</li>
+                <li>Analytics dashboard &amp; response ratings</li>
               </ul>
-              <Link href="/checkout" className={styles.planButton}>
-                {plan.cta}
-              </Link>
-            </article>
-          ))}
-        </section>
-
-        <section className={styles.highlightGrid}>
-          {highlights.map((item) => (
-            <article key={item.title} className={styles.highlightCard}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </section>
-
-        <section className={styles.stepsSection}>
-          <div className={styles.sectionHeader}>
-            <h2>Launch in three steps</h2>
-            <p>Go from install to live support without the heavy lift.</p>
-          </div>
-          <div className={styles.stepsGrid}>
-            {steps.map((step, index) => (
-              <article key={step.title} className={styles.stepCard}>
-                <span className={styles.stepIndex}>{index + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className={styles.comparisonSection}>
-          <div className={styles.sectionHeader}>
-            <h2>Compare plans</h2>
-            <p>See the features that unlock at every tier.</p>
-          </div>
-          <div className={styles.comparisonTable}>
-            <div className={styles.comparisonHeader}>
-              <span />
-              <span>Starter</span>
-              <span>Growth</span>
-              <span>Pro</span>
+              <p className={styles.heroFootnote}>
+                All plans include the WooCommerce plugin and support.
+              </p>
             </div>
-            {comparisonRows.map((row) => (
-              <div key={row.label} className={styles.comparisonRow}>
-                <span className={styles.comparisonLabel}>{row.label}</span>
-                {row.values.map((value, idx) => (
-                  <span
-                    key={`${row.label}-${idx}`}
-                    className={styles.comparisonValue}
-                  >
-                    {value}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
+          </section>
+        </Reveal>
 
-        <section className={styles.faqSection}>
-          <div className={styles.sectionHeader}>
-            <h2>Pricing questions</h2>
-            <p>Everything you need to know before choosing a plan.</p>
-          </div>
-          <div className={styles.faqGrid}>
-            {faqs.map((item) => (
-              <article key={item.question} className={styles.faqCard}>
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
+        <Reveal>
+          <section className={styles.planGrid}>
+            {plans.map((plan) => (
+              <article
+                key={plan.name}
+                className={`${styles.planCard} ${
+                  plan.badge ? styles.planCardPopular : ""
+                }`}
+              >
+                <div className={styles.planTop}>
+                  <div>
+                    <p className={styles.planName}>{plan.name}</p>
+                    <p className={styles.planPrice}>
+                      <span>{plan.price}</span>
+                      {plan.cadence}
+                    </p>
+                  </div>
+                  {plan.badge ? (
+                    <span className={styles.planBadge}>{plan.badge}</span>
+                  ) : null}
+                </div>
+                <p className={styles.planDescription}>{plan.description}</p>
+                <ul className={styles.planList}>
+                  {plan.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+                <Link href="/checkout" className={styles.planButton}>
+                  {plan.cta}
+                </Link>
               </article>
             ))}
-          </div>
-        </section>
+          </section>
+        </Reveal>
 
-        <section className={styles.finalCta}>
-          <div>
-            <h2>Ready to start selling with AI?</h2>
-            <p>Spin up your AI support team today and see results this week.</p>
-          </div>
-          <Link href="/checkout" className={styles.finalButton}>
-            Start free trial
-          </Link>
-        </section>
+        <Reveal>
+          <section className={styles.highlightGrid}>
+            {highlights.map((item) => (
+              <article key={item.title} className={styles.highlightCard}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section className={styles.stepsSection}>
+            <div className={styles.sectionHeader}>
+              <h2>Launch in three steps</h2>
+              <p>Go from install to live support without the heavy lift.</p>
+            </div>
+            <div className={styles.stepsGrid}>
+              {steps.map((step, index) => (
+                <article key={step.title} className={styles.stepCard}>
+                  <span className={styles.stepIndex}>{index + 1}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section className={styles.comparisonSection}>
+            <div className={styles.sectionHeader}>
+              <h2>Compare plans</h2>
+              <p>See the features that unlock at every tier.</p>
+            </div>
+            <div className={styles.comparisonTable}>
+              <div className={styles.comparisonHeader}>
+                <span />
+                <span>Starter</span>
+                <span>Growth</span>
+                <span>Pro</span>
+              </div>
+              {comparisonRows.map((row) => (
+                <div key={row.label} className={styles.comparisonRow}>
+                  <span className={styles.comparisonLabel}>{row.label}</span>
+                  {row.values.map((value, idx) => (
+                    <span
+                      key={`${row.label}-${idx}`}
+                      className={styles.comparisonValue}
+                    >
+                      {value}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section className={styles.faqSection}>
+            <div className={styles.sectionHeader}>
+              <h2>Pricing questions</h2>
+              <p>Everything you need to know before choosing a plan.</p>
+            </div>
+            <div className={styles.faqGrid}>
+              {faqs.map((item) => (
+                <article key={item.question} className={styles.faqCard}>
+                  <h3>{item.question}</h3>
+                  <p>{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section className={styles.finalCta}>
+            <div>
+              <h2>Ready to start selling with AI?</h2>
+              <p>Spin up your AI support team today and see results this week.</p>
+            </div>
+            <Link href="/checkout" className={styles.finalButton}>
+              Start free trial
+            </Link>
+          </section>
+        </Reveal>
       </main>
       <SiteFooter />
     </div>
